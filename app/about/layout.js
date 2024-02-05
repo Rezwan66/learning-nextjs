@@ -1,8 +1,19 @@
+import Link from 'next/link';
+
 const AboutLayout = ({ children }) => {
   return (
     <>
       <div>
-        <nav className="my-6">Mission | Vision</nav>
+        <nav className="my-6">
+          <ul className="flex gap-4">
+            <li>
+              <Link href="/about/mission">Mission</Link>
+            </li>
+            <li>
+              <Link href="/about/vision">Vision</Link>
+            </li>
+          </ul>
+        </nav>
         {children}
       </div>
     </>
