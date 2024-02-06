@@ -2,7 +2,7 @@ const loading = () => {
   return (
     <>
       <div>
-        <h2> Loading about segment... </h2>
+        <h2> Loading... </h2>
       </div>
     </>
   );
