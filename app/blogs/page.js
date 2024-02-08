@@ -1,14 +1,18 @@
+import Link from 'next/link';
+
 const Blogs = () => {
   const blogs = [
-    { title: 'Blog 1', description: 'Blog 1 description' },
-    { title: 'Blog 2', description: 'Blog 2 description' },
+    { id: 1, title: 'Blog 1', description: 'Blog 1 description' },
+    { id: 2, title: 'Blog 2', description: 'Blog 2 description' },
   ];
   return (
     <main className="mt-10">
-      <h2> Blogs page </h2>
+      {/* <h2> Blogs page </h2> */}
       <ul>
         {blogs.map(blog => (
-          <li key={blog.title}>{blog.title}</li>
+          <li className="mb-5" key={blog.id}>
+            <Link href={`/blogs/${blog.id}`}>{blog.title}</Link>
+          </li>
         ))}
       </ul>
     </main>
