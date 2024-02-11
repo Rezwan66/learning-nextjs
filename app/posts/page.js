@@ -6,11 +6,11 @@ export default async function Posts() {
   //   console.log(posts);
   return (
     <div className="mt-6">
-      <h1> All Posts: {posts.length} </h1>
+      <h1 className="mb-4 text-xl"> All Posts: {posts.length} </h1>
       <ul>
         {posts.map(post => (
           <li
-            className="border border-blue-400 max-w-[800px] hover:bg-yellow-200"
+            className="border-2 max-w-[800px] hover:bg-blue-200"
             key={post.id}
           >
             <Link href={`/posts/${post.id}`}>{post.title}</Link>
